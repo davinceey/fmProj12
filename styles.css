@@ -1,0 +1,229 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+.container {
+  display: flex;
+}
+
+section {
+  background-image: url("images/bg-pattern-desktop.svg");
+  background-size: cover;
+}
+
+.sub__section {
+  width: 100%;
+  padding: 3em 0 0 10em;
+}
+.info {
+  width: 60%;
+}
+h1 {
+  font-size: 4cqw;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 19px;
+  color: hsl(0, 6%, 24%);
+  margin-top: 2.5em;
+  margin-bottom: 0.5em;
+}
+.title {
+  color: hsl(0, 36%, 70%);
+}
+.title__span {
+  font-weight: 300;
+}
+.logo {
+  background-color: hsl(0, 20%, 99%);
+  position: absolute;
+  width: 20em;
+  padding: 2em 0 2em 5em;
+  left: 5em;
+}
+/* .title__p{
+    font-size: 1cqw;
+} */
+p {
+  width: 100%;
+}
+.form__info {
+  margin-top: 3em;
+  width: 60%;
+  position: relative;
+}
+.email {
+  background-color: transparent;
+  width: 100%;
+  padding: 1em;
+  border-radius: 30px;
+  border-color: hsla(0, 36%, 70%, 0.5);
+  border-style: solid;
+}
+.arrow {
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  width: 7em;
+  padding: 1.2em 1em;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 90%;
+  border-radius: 30px;
+  transition: all 0.5s;
+  box-shadow: 0px 5px 20px 0px hsl(0, 15%, 61%);
+  cursor: pointer;
+}
+.err {
+  position: absolute;
+  top: 19px;
+  left: 85%;
+  display: block;
+}
+.inactive {
+  display: none;
+}
+.arrow__img {
+  width: 0.8em;
+}
+.arrow:hover {
+  background: linear-gradient(135deg, hsl(0, 75%, 81%), hsl(0, 68%, 67%));
+  transform: translateX(5px);
+}
+
+::placeholder {
+  color: hsla(0, 36%, 70%, 0.5);
+}
+
+.desktop__hero {
+  width: 42cqw;
+  object-fit: cover;
+  /* width: 49.3em;*/
+}
+.mobile__hero {
+  display: none;
+}
+.hero__query {
+  display: none;
+}
+@media (max-width: 780px) {
+  .container {
+    flex-direction: column;
+  }
+  section {
+    order: 2;
+   
+  }
+  .sub__section {
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+  }
+  .info{
+      text-align: center;
+      width: 100%;
+  }
+  .form__info{
+  width: 100%;
+  margin-bottom: 5em;
+  }
+  h1{
+      font-size: 10cqw;
+      margin-top: 1.2em;
+  }
+  .title__p{
+      font-size: 3cqw;
+  }
+  .logo {
+    top: 0;
+    padding: 2em 0 2em 2em;
+    width: 100%;
+    left: 0;
+  }
+  .desktop__hero {
+    display: none;
+  }
+  .mobile__hero {
+    display: block;
+    width: 100cqw;
+    margin-top: 5em;
+  }
+}

@@ -183,6 +183,8 @@ p {
 @media (max-width: 780px) {
   .container {
     flex-direction: column;
+    overflow: hidden
+
   }
   section {
     order: 2;
